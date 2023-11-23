@@ -1,22 +1,32 @@
-<?php include("app_setup.php") ?>
-<nav>
-    <div class="navbar-wrapper">
-        <div>
-            <a class="logo" href="index.php">
-                <?php echo $logo; ?>
-        </div>
-        </a>
+<!DOCTYPE html>
+<html lang="en">
 
-        <div class="link-container">
-            <a class="link-item" href="#">
-                <?php echo $news_title;?>
+<head>
+    <meta charset="UTF-8">
+    <?php wp_head(); ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ad-astra</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-wrapper">
+            <div>
+                <a class="logo" href="index.php">
+                    ad-astra
+            </div>
             </a>
-            <a class="link-item" href="#">
-                <?php echo $about_title; ?>
-            </a>
-            <a class="link-item" href="#">
-                <?php echo $contact_title; ?>
-            </a>
+
+            <div class="link-container">
+                <a class="link-item" href="#">
+                    news
+                </a>
+                <a class="link-item" href="#">
+                    about
+                </a>
+                <a class="link-item" href="#">
+                    contact
+                </a>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
