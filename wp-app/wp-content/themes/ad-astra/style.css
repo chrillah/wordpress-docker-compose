@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --display-font:'Archivo Black', sans-serif;
+    --app-font: 'Poppins', sans-serif;
+
+    --dark: #000000;
+    --light: #FFFFFF;
+
+    --primary: var(--light);
+    --secondary: var(--dark);
+
+
+    --max-width: 1400px;
+}
+
+body{
+    background-color: var(--secondary);
+}
+
+.app-bg{
+    /* top: 0;
+    left: 0;
+    right: 0;
+    position: absolute; */
+}
+
+body,
+h1,
+p,
+a{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    color: var(--primary);
+    font-family: var(--display-font);
+}
+
+p,a{
+    font-family: var(--app-font);
+    color: var(--primary)
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+}
+
+.navbar-wrapper{
+    margin: 0 auto;
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 0 .5rem;
+}
+
+.link-container{
+}
+
+.logo{
+    font-family: var(--display-font);
+    font-size: 1.2rem;
+}
+.link-item{
+    padding: 0 .5rem;
+}
+.link-item:hover{
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+.hero{
+    padding: 0 -5rem;
+    height: 100dvh;
+}
+.hero-image{
+    background-image: url(https://webb.nasa.gov/content/webbLaunch/assets/images/images2023/nov-20-23-STScI-01HF7P3X06S6DD4MEXWQASJ7YJ-1K.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-title{
+    font-size: 8rem;
+}
