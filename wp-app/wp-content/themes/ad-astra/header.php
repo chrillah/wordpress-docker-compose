@@ -12,21 +12,25 @@
     <nav>
         <div class="navbar-wrapper">
             <div>
-                <a class="logo" href="index.php">
+                <a class="logo" href="<?php echo esc_url(home_url('/')); ?>">
                     ad-astra
+                </a>
             </div>
-            </a>
 
             <div class="link-container">
-                <a class="link-item" href="#">
-                    news
-                </a>
-                <a class="link-item" href="#">
-                    about
-                </a>
-                <a class="link-item" href="#">
-                    contact
-                </a>
+                <?php
+                $args = array(
+                    'theme_location' => 'header-menu',
+                    'container' => false,
+                    'menu_class' => 'link-container',
+                );
+                wp_nav_menu($args);
+                ?>
             </div>
         </div>
     </nav>
+
+    <?php wp_footer(); ?>
+</body>
+
+</html>
