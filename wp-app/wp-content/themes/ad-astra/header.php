@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <nav>
+    <nav id="nav">
         <div class="navbar-wrapper">
             <div>
                 <a class="logo" href="<?php echo esc_url(home_url('/')); ?>">

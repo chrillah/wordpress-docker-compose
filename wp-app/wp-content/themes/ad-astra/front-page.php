@@ -1,4 +1,4 @@
-<?php get_header();?>
+<?php get_header(); ?>
 
 <div class="hero">
     <div class="hero-image">
@@ -6,4 +6,4 @@
     </div>
 </div>
 
-<?php get_footer();?>
+<?php get_footer(); ?>

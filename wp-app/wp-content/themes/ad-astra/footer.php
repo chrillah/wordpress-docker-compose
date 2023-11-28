@@ -15,7 +15,7 @@
                         <a class="read-more" href="#">> Instagram</a>
                     </li>
                     <li>
-                        <a class="read-more" href="#">> Only Fans</a>
+                        <a class="read-more" href="#">> OnlyFans</a>
                     </li>
                 </ul>
             </div>
