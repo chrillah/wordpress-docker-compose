@@ -1,36 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <title>Labb 1</title>
     <?php wp_head(); ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ad-astra</title>
 </head>
 
 <body>
-    <nav id="nav">
-        <div class="navbar-wrapper">
-            <div>
-                <a class="logo" href="<?php echo esc_url(home_url('/')); ?>">
-                    ad-astra
-                </a>
+    <div id="wrap">
+        <header id="header">
+            <div class="header-container">
+                <!-- logo -->
+                <div>
+                    <a class="logo-type" href="index.html">Labb 1</a>
+                </div>
+                <!-- search -->
+
+                <!-- KLISTRA IN SAKER FRÅN INDEX -->
+                <form
+                        id="searchform"
+                        class="searchform"
+                        action="search.php"
+                    >
+                        <div>
+                            <input placeholder="Sök efter..." type="text" />
+                            <input
+                                class="app-button"
+                                type="submit"
+                                value="Sök"
+                            />
+                        </div>
+                    </form>
             </div>
 
-            <div class="link-container">
-                <?php
-                $args = array(
-                    'theme_location' => 'header-menu',
-                    'container' => false,
-                    'menu_class' => 'link-container',
-                );
-                wp_nav_menu($args);
-                ?>
-            </div>
-        </div>
-    </nav>
+            <nav id="nav">
+                <div class="nav-container">
+                    <?php
+                    // Visa WordPress-menyen med namnet 'ad-astra-header-meny'
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'ad-astra-header-meny',
+                            'menu_class' => 'nav-menu',
+                        )
+                    );
+                    ?>
+                </div>
+            </nav>
+        </header>
 
-    <?php wp_footer(); ?>
-</body>
-
-</html>
+        <!-- <div class="mobile-search">
+            <form id="searchform" class="searchform">
+                <div>
+                    <label class="screen-reader-text">Sök efter:</label>
+                    <input type="text" />
+                    <input type="submit" value="Sök" />
+                </div>
+            </form>
+        </div> -->

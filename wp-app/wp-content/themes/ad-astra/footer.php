@@ -1,39 +1,67 @@
-<footer>
-    <div>
-        <h1 class="footer-title">Get in touch</h1>
-
-        <div class="footer-misc-container">
-            <div>
-                <ul class="footer-link-container">
-                    <li>
-                        <a class="read-more" href="#">> Youtube</a>
-                    </li>
-                    <li>
-                        <a class="read-more" href="#">> Twitch</a>
-                    </li>
-                    <li>
-                        <a class="read-more" href="#">> Instagram</a>
-                    </li>
-                    <li>
-                        <a class="read-more" href="#">> OnlyFans</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <ul class="footer-info-container">
-                    <li>
-                        <p>Do you want to know more?</p>
-                        <a class="read-more" href="contact.html">> Contact us</a>
-                    </li>
-                    <li>
-                        <p>Want to add something?</p>
-                        <a class="read-more" href="#">> Add your ad</a>
-                    </li>
-                </ul>
-            </div>
+<footer id="footer">
+                <div class="container">
+                    <div class="row top">
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <h4>Kort om oss</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Sed sed sodales mauris. Aliquam
+                                felis est, efficitur vel fringilla quis,
+                                vehicula quis ex.
+                            </p>
+                            <p>
+                                Phasellus tristique nunc in leo faucibus, a
+                                consequat nulla sagittis.
+                            </p>
+                        </div>
+                        <div
+                            class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1"
+                        >
+                            <h4>Kontaktuppgifter</h4>
+                            <p>
+                                The Company<br />
+                                Gatgatan 1<br />
+                                123 45 Någonstans
+                            </p>
+                            <p>
+                                Tel: 0123456789<br />
+                                E-post: <a href="">info@thecompany.com</a>
+                            </p>
+                        </div>
+                        <div
+                            class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1"
+                        >
+                            <h4>Social media</h4>
+                            <ul class="social">
+                                <li>
+                                    <i class="fa fa-facebook"></i>
+                                    <a href="">Facebook</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-twitter"></i>
+                                    <a href="">Twitter</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-instagram"></i>
+                                    <a href="">Instagram</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-linkedin"></i>
+                                    <a href="">LinkedIn</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row bottom">
+                        <div class="col-xs-12">
+                            <p>Copyright &copy; Grupp X, 2016</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-    </div>
-</footer>
-</body>
 
+        <script src="js/script.js"></script>
+    </body>
 </html>
+

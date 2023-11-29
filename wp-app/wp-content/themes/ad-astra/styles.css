@@ -4,13 +4,12 @@ Theme URI: http://www.yourtheme.com
 Description: To the stars. With ads
 Author: Christopher Rönnberg
 Author URI: http://www.yourwebsite.com
-Version: 1.3
+Version: 1.4
 License: GPL-2.0+
 License URI: http://www.gnu-org/licenses/gpl-2.0.html
 Text Domain: your-theme-slug
 */
 
-/*
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
@@ -37,11 +36,19 @@ body {
 .app-bg {
 }
 
+.a-page {
+    padding: 0 0.3rem;
+    padding-top: 5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
 html,
 body,
 h1,
 h2,
 h3,
+h4,
 h6,
 p,
 a,
@@ -60,11 +67,12 @@ form {
 h1 {
     color: var(--primary);
     font-family: var(--display-font);
-} */
+}
 
-/* h2,
+h2,
 h6,
 h3,
+h4,
 p,
 a {
     font-family: var(--app-font);
@@ -75,12 +83,287 @@ a {
     text-decoration: none;
 }
 
+li {
+    list-style: none;
+}
+
 img {
     width: 100%;
     max-height: auto;
 }
 
-nav {
+header {
+    /* background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 20%,
+        rgba(0, 0, 0, 0.6) 90%,
+        rgba(0, 0, 0, 0.3) 80%,
+        rgba(0, 0, 0, 0) 100%
+    ); */
+
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.47942927170868344) 67%,
+        rgba(0, 0, 0, 0.2805497198879552) 100%
+    );
+    padding: 0 0.3rem;
+    padding-top: 0.5rem;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-type {
+    font-family: var(--display-font);
+    text-transform: lowercase;
+}
+
+form input {
+    color: var(--primary);
+    font-family: var(--app-font);
+    min-height: 25px;
+    border: transparent 1px solid;
+    outline: transparent 1px solid;
+    background-color: transparent;
+    border-bottom: 3px solid var(--primary);
+}
+
+form input::placeholder {
+    color: var(--primary);
+    font-family: var(--app-font);
+}
+
+.nav-container {
+    margin: 0 auto;
+    max-width: var(--max-width);
+}
+
+.nav-menu {
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-menu li a {
+    padding: 0 0.3rem;
+}
+
+.nav-menu li:hover a {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.app-button {
+    max-width: 100px;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 100px;
+    cursor: pointer;
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: 3px solid var(--primary);
+    font-family: var(--display-font);
+    transition: all ease-in-out 300ms;
+}
+
+.app-button:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.hero {
+    height: 100dvh;
+}
+
+.hero-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-text-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 4rem;
+}
+
+@media (min-width: 425px) {
+    .hero-title {
+        font-size: 6rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 8rem;
+    }
+}
+.small-title {
+    font-size: 1.5rem;
+}
+
+/* Main */
+
+.page-title {
+    font-family: var(--display-font);
+    text-transform: lowercase;
+    font-size: 4rem;
+    padding-bottom: 3rem;
+}
+
+.blogg-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    padding-bottom: 3rem;
+}
+
+.list-of-bloggs {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.blogg-post {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.blogg-info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.blogg-title {
+    font-size: 1.8rem;
+}
+
+.blogg-misc {
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.blogg-misc li p,
+.blogg-misc li a {
+    font-size: 0.8rem;
+}
+
+.blogg-text {
+    padding-bottom: 3rem;
+}
+
+section form {
+    padding-top: 5rem;
+    max-width: 1000px;
+    display: grid;
+    gap: 1rem;
+    padding-bottom: 9rem;
+}
+
+section form div {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+}
+
+section form div:first-child {
+    gap: 3rem;
+}
+
+form input {
+    color: var(--primary);
+    font-family: var(--app-font);
+    min-height: 25px;
+    border: transparent 1px solid;
+    outline: transparent 1px solid;
+    background-color: transparent;
+    border-bottom: 3px solid var(--primary);
+}
+
+form input::placeholder {
+    color: var(--primary);
+    font-family: var(--app-font);
+}
+
+form textarea {
+    min-height: 100px;
+    outline: transparent;
+    border: 3px solid transparent;
+    background-color: var(--primary);
+    font-family: var(--app-font);
+}
+
+form textarea::placeholder {
+    color: var(--secondary);
+    font-family: var(--app-font);
+}
+
+footer {
+    padding: 0 0.3rem;
+    background-color: var(--primary);
+}
+
+.footer-container {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-rows: auto auto;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    gap: 3rem;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 1rem;
+}
+
+.footer-top div h4,
+.footer-top div p,
+.footer-top div a {
+    color: var(--secondary);
+}
+
+.footer-top div p {
+    max-width: 400px;
+}
+
+.footer-bottom {
+    margin-left: auto;
+    padding-bottom: 1rem;
+}
+
+.footer-bottom p {
+    color: var(--secondary);
+}
+
+.social-container li a {
+    color: var(--secondary);
+}
+
+/* nav {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
@@ -94,9 +377,9 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 0 0 0 0.5rem;
-} */
+}
 
-/* .link-container {
+.link-container {
 }
 
 .logo {
@@ -109,8 +392,8 @@ nav {
 .link-item:hover {
     background-color: var(--primary);
     color: var(--secondary);
-}
-.hero {
+} */
+/* .hero {
     height: 100dvh;
 }
 .hero-image {
@@ -139,9 +422,9 @@ nav {
     .hero-title {
         font-size: 8rem;
     }
-}
+} */
 
-.small-title {
+/* .small-title {
     font-size: 3rem;
 }
 
@@ -160,9 +443,9 @@ section {
 }
 
 .news-hero {
-}
+} */
 
-.news-container {
+/* .news-container {
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -179,9 +462,9 @@ section {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
-}
+} */
 
-.thumb-header {
+/* .thumb-header {
     font-size: 1rem;
 }
 
@@ -267,9 +550,9 @@ form textarea {
 form textarea::placeholder {
     color: var(--secondary);
     font-family: var(--app-font);
-}
+} */
 
-.app-button {
+/* .app-button {
     padding: 0.5rem 0;
     cursor: pointer;
     border-radius: 100px;
@@ -283,9 +566,9 @@ form textarea::placeholder {
 .app-button:hover {
     background-color: var(--primary);
     color: var(--secondary);
-}
+} */
 
-footer div {
+/* footer div {
     padding: 1rem 0.5rem 0.5rem 0.5rem;
     max-width: var(--max-width);
     margin: 0 auto;
