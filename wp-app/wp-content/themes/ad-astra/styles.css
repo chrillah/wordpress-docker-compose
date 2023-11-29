@@ -288,6 +288,10 @@ section form div {
     gap: 1rem;
 }
 
+section form div {
+    padding-bottom: 2rem;
+}
+
 section form div:first-child {
     gap: 3rem;
 }
