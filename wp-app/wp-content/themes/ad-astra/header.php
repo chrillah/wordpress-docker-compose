@@ -21,7 +21,6 @@
                 </div>
             </form>
         </div>
-
         <nav id="nav">
             <div class="nav-container">
                 <?php

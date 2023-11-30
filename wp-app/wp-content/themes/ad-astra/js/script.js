@@ -1,16 +1,16 @@
-(function($){
+;(function ($) {
+    // Menu icon
 
-	// Menu icon
+    $('.menu-icon').click(function () {
+        $(this).toggleClass('fa-bars fa-close')
+        $('#nav').slideToggle()
+    })
 
-	$('.menu-icon').click(function(){
-		$(this).toggleClass('fa-bars fa-close');
-		$('#nav').slideToggle();
-	});
+    // Search icon
 
-	// Search icon
+    $('.fa-search').click(function () {
+        $('.mobile-search').slideToggle()
+    })
+})(jQuery)
 
-	$('.fa-search').click(function(){
-		$('.mobile-search').slideToggle();
-	});
 
-})(jQuery);
