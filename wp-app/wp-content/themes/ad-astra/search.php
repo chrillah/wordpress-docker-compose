@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main>
+<main class="a-page">
     <section>
         <?php if (have_posts()):
             while (have_posts()):

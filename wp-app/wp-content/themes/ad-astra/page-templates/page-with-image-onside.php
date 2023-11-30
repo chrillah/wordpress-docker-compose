@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Undersida4
+Template Name: TestHest
 */
 ?>
 <?php get_header(); ?>

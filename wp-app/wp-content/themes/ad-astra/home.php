@@ -1,55 +1,54 @@
 <?php get_header(); ?>
-<main>
+<main class="a-page">
     <section>
-        <h1>
+        <h1 h1 class="page-title">
             <?php single_post_title(); ?>
+
         </h1>
     </section>
-    <section>
-        <div>
-            <div>
-                <div>
-                    <!-- till home.php en blogg kräver single_post_title() -->
-                </div>
-            </div>
-            <div>
-                <div>
-                    <?php if (have_posts()):
-                        while (have_posts()):
-                            the_post(); ?>
-                            <!-- INNUTI LOOPEN -->
-                            <article>
-                                <a href="<?= the_permalink(); ?>">
-                                    <h1 class="title">
-                                        <h1>
-                                            <?= the_title(); ?>
-                                        </h1>
-                                </a>
-                                <img src="<?= the_post_thumbnail_url("large") ?>" alt="">
-                                <ul class="meta">
-                                    <li>
-                                        <i class="fa fa-calender"></i>
-                                        <?= the_time("j F, Y"); ?>
-                                    </li>
-                                    <li class="fa fa-calender">
-                                        <?= the_author_posts_link(); ?>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-user"></i>
-                                        <?php the_category(", "); ?>
-                                    </li>
-                                </ul>
-                                <?= the_excerpt(); ?>
-                            </article>
+    <section class="blogg-container">
+        <div class="list-of-bloggs">
+            <?php if (have_posts()):
+                while (have_posts()):
+                    the_post(); ?>
+                    <a href="<?= the_permalink(); ?>" class="blogg-post">
+                        <img src="<?= the_post_thumbnail_url("large") ?>" alt="">
 
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                </div>
-                <aside id="sidebar" class="col-xs-12 col-md-3">
-                    <?php get_sidebar(); ?>
-                </aside>
-            </div>
+                        <div class="blogg-info">
+
+                            <h2 class="blogg-title">
+                                <?= the_title(); ?>
+                            </h2>
+
+                            <ul class="blogg-misc">
+                                <li>
+                                    <?= the_time("j F, Y"); ?>
+                                </li>
+                                <li>
+                                    <?= the_author_posts_link(); ?>
+                                </li>
+                                <li>
+                                    <?php the_category(", "); ?>
+                                </li>
+                            </ul>
+                        </div>
+                        <?= the_excerpt(); ?>
+                    </a>
+                <?php endwhile; ?>
+            <?php endif; ?>
         </div>
+        <aside id="secondary" class="sidebar-container">
+            <?php get_sidebar(); ?>
+        </aside>
+    </section>
+    <section>
+        <?= paginate_links(
+            array(
+                'total' => $wp_query->max_num_comment_pages,
+                'prev_text' => _('Föregående'),
+                'next_text' => _('Nästa')
+            )
+        ); ?>
     </section>
 </main>
 <?php get_footer(); ?>

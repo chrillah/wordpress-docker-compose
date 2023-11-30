@@ -1,7 +1,7 @@
 <?php
 function load_style_script()
 {
-
+    $version = wp_get_theme()->get('Version');
     wp_enqueue_style('adastra-style', get_template_directory_uri() . '/style.css');
 
     wp_enqueue_script('min-jquery', get_template_directory_uri() . '/js/jquery.js', array(), '3.6.0', true);
@@ -48,5 +48,12 @@ function adastra_theme_support()
 }
 add_action('after_setup_theme', 'adastra_theme_support');
 
-?>
+// pagenation
+function items_per_page($query)
+{
+    $query->set('posts_per_page', 3);
+}
 
+add_action('pre_get_posts', 'items_per_page');
+
+?>

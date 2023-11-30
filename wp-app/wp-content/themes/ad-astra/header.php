@@ -22,7 +22,7 @@
                 </form>
             </div>
 
-            <!-- <nav id="nav">
+            <nav id="nav">
                 <div class="nav-container">
                     <?php
                     // Visa WordPress-menyen med namnet 'ad-astra-header-meny'
@@ -34,7 +34,7 @@
                     );
                     ?>
                 </div>
-            </nav> -->
+            </nav>
 
 
         </header>
