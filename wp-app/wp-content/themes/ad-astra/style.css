@@ -17,6 +17,8 @@ Version: 1.1
     --secondary: var(--dark);
 
     --max-width: 1400px;
+
+    --side-pad: 0 1rem;
 }
 
 html {
@@ -31,7 +33,7 @@ body {
 }
 
 .a-page {
-    padding: 0 0.3rem;
+    padding: var(--side-pad);
     padding-top: 5rem;
     max-width: var(--max-width);
     margin: 0 auto;
@@ -87,14 +89,6 @@ img {
 }
 
 header {
-    /* background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 1) 20%,
-        rgba(0, 0, 0, 0.6) 90%,
-        rgba(0, 0, 0, 0.3) 80%,
-        rgba(0, 0, 0, 0) 100%
-    ); */
-
     background: rgb(0, 0, 0);
     background: linear-gradient(
         180deg,
@@ -102,9 +96,8 @@ header {
         rgba(0, 0, 0, 0.47942927170868344) 67%,
         rgba(0, 0, 0, 0.2805497198879552) 100%
     );
-    padding: 0 0.3rem;
+    padding: var(--side-pad);
     padding-top: 0.5rem;
-    /* background-color: rgba(0, 0, 0, 0.5); */
     position: fixed;
     top: 0;
     left: 0;
@@ -151,6 +144,13 @@ form input::placeholder {
     max-width: var(--max-width);
 }
 
+@media (min-width: 768px) {
+    .nav-container {
+        margin: 0 auto;
+        max-width: var(--max-width);
+    }
+}
+
 .nav-menu {
     max-width: 600px;
     display: flex;
@@ -158,7 +158,7 @@ form input::placeholder {
 }
 
 .nav-menu li a {
-    padding: 0 0.3rem;
+    padding: var(--side-pad);
 }
 
 .nav-menu li:hover a {
@@ -201,7 +201,7 @@ form input::placeholder {
 }
 
 .hero-text-container {
-    padding: 0 0.3rem;
+    padding: var(--side-pad);
     max-width: var(--max-width);
     margin: 0 auto;
 }
@@ -239,6 +239,10 @@ form input::placeholder {
     grid-template-columns: auto auto auto;
     gap: 1rem;
     padding-bottom: 3rem;
+}
+
+#secondary {
+    padding-right: 2rem;
 }
 
 .list-of-bloggs {
@@ -335,7 +339,7 @@ form textarea::placeholder {
 }
 
 footer {
-    padding: 0 0.3rem;
+    padding: var(--side-pad);
     background-color: var(--primary);
 }
 
@@ -350,8 +354,16 @@ footer {
 
 .footer-top {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
     gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .footer-top {
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: 1fr;
+    }
 }
 
 .footer-top div h4,
@@ -375,6 +387,10 @@ footer {
 
 .social-container li a {
     color: var(--secondary);
+}
+
+.another-font {
+    font-family: var(--display-font) !important;
 }
 
 /* nav {
