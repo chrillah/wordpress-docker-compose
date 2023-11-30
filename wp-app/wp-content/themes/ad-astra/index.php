@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <title>Labb 1</title>
-    <link href="/styles.css" rel="stylesheet" type="text/css" />
-    <script src="/js/jquery.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.js"></script>
 </head>
 
 <body>

@@ -10,15 +10,11 @@
 <body>
     <div id="wrap">
         <header id="header">
-            <div class="header-container">
-                <!-- logo -->
-                <div>
-                    <a class="logo-type" href="index.html">Labb 1</a>
-                </div>
-                <!-- search -->
-
-                <!-- KLISTRA IN SAKER FRÅN INDEX -->
-                <form
+        <div class="header-container">
+                    <div>
+                        <a class="logo-type" href="index.html">Labb 1</a>
+                    </div>
+                    <form
                         id="searchform"
                         class="searchform"
                         action="search.php"
@@ -32,9 +28,9 @@
                             />
                         </div>
                     </form>
-            </div>
+                </div>
 
-            <nav id="nav">
+            <!-- <nav id="nav">
                 <div class="nav-container">
                     <?php
                     // Visa WordPress-menyen med namnet 'ad-astra-header-meny'
@@ -46,7 +42,9 @@
                     );
                     ?>
                 </div>
-            </nav>
+            </nav> -->
+
+
         </header>
 
         <!-- <div class="mobile-search">
