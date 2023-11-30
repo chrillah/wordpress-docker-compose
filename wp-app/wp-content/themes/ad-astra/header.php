@@ -25,7 +25,6 @@
         <nav id="nav">
             <div class="nav-container">
                 <?php
-                // Visa WordPress-menyen med namnet 'ad-astra-header-meny'
                 wp_nav_menu(
                     array(
                         'theme_location' => 'ad-astra-header-meny',
@@ -38,14 +37,4 @@
 
 
     </header>
-
-    <!-- <div class="mobile-search">
-            <form id="searchform" class="searchform">
-                <div>
-                    <label class="screen-reader-text">Sök efter:</label>
-                    <input type="text" />
-                    <input type="submit" value="Sök" />
-                </div>
-            </form>
-        </div> -->
     <div id="wrap">

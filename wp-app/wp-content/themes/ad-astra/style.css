@@ -104,6 +104,15 @@ header {
     right: 0;
 }
 
+/* ska läggas på header som class */
+.menu-open {
+    height: 100vh;
+}
+
+.menu-close {
+    height: 0;
+}
+
 .header-container {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -145,10 +154,10 @@ form input::placeholder {
 }
 
 @media (min-width: 768px) {
-    .nav-container {
-        margin: 0 auto;
-        max-width: var(--max-width);
-    }
+    /* #nav,
+    #searchform {
+        display: none;
+    } */
 }
 
 .nav-menu {
