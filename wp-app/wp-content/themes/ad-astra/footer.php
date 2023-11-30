@@ -16,7 +16,10 @@
             </div>
             <div>
                 <h4>Kontaktuppgifter</h4>
-                <p>
+                <?php if (is_active_sidebar("adress widget")) {
+                    dynamic_sidebar("adress widget");
+                } ?>
+                <!-- <p>
                     The Company<br />
                     Gatgatan 1<br />
                     123 45 Någonstans
@@ -24,7 +27,7 @@
                 <p>
                     Tel: 0123456789<br />
                     E-post: <a href="">info@thecompany.com</a>
-                </p>
+                </p> -->
             </div>
             <div>
                 <h4>Social media</h4>
@@ -48,7 +51,9 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>Copyright &copy; Grupp X, 2016</p>
+            <p>Copyright &copy; Grupp X,
+                <?php echo date('Y') ?>
+            </p>
         </div>
     </div>
 </footer>

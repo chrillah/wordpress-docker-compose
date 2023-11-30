@@ -28,6 +28,27 @@ function ad_astra_register_menus()
 }
 add_action('after_setup_theme', 'ad_astra_register_menus');
 
+function custom_side_menu()
+{
+    register_nav_menu('undersida_nav', __('Undersida Nav'));
+}
+add_action('after_setup_theme', 'custom_side_menu');
+
+function demotema_register_sidebars()
+{
+    register_sidebar(
+        array(
+            'name' => 'adress widget',
+            'id' => 'adress-widget',
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>'
+
+        )
+    );
+}
+
+add_action('widgets_init', 'demotema_register_sidebars');
+
 
 // function adastra_menus()
 // {
@@ -49,11 +70,11 @@ function adastra_theme_support()
 add_action('after_setup_theme', 'adastra_theme_support');
 
 // pagenation
-function items_per_page($query)
-{
-    $query->set('posts_per_page', 3);
-}
+// function items_per_page($query)
+// {
+//     $query->set('posts_per_page', 3);
+// }
 
-add_action('pre_get_posts', 'items_per_page');
+// add_action('pre_get_posts', 'items_per_page');
 
 ?>

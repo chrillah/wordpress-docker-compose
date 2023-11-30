@@ -32,7 +32,9 @@
                                 </li>
                             </ul>
                         </div>
-                        <?= the_excerpt(); ?>
+                        <p>
+                            <?= the_excerpt(); ?>
+                        </p>
                     </a>
                 <?php endwhile; ?>
             <?php endif; ?>
@@ -42,13 +44,22 @@
         </aside>
     </section>
     <section>
-        <?= paginate_links(
+        <?php
+        // Add pagination links
+        the_posts_pagination(
+            array(
+                'prev_text' => __('Previous', 'textdomain'),
+                'next_text' => __('Next', 'textdomain'),
+            )
+        );
+        ?>
+        <!-- <?= paginate_links(
             array(
                 'total' => $wp_query->max_num_comment_pages,
                 'prev_text' => _('Föregående'),
                 'next_text' => _('Nästa')
             )
-        ); ?>
+        ); ?> -->
     </section>
 </main>
 <?php get_footer(); ?>

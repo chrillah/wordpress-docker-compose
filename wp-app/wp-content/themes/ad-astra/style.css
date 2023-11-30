@@ -123,6 +123,14 @@ header {
     text-transform: lowercase;
 }
 
+.contact-form {
+    color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 form input {
     color: var(--primary);
     font-family: var(--app-font);
@@ -193,6 +201,7 @@ form input::placeholder {
 }
 
 .hero-text-container {
+    padding: 0 0.3rem;
     max-width: var(--max-width);
     margin: 0 auto;
 }
@@ -241,7 +250,6 @@ form input::placeholder {
     display: grid;
     gap: 0.5rem;
 }
-
 
 .blogg-info {
     display: flex;
@@ -313,6 +321,7 @@ form input::placeholder {
 }
 
 form textarea {
+    width: 100%;
     min-height: 100px;
     outline: transparent;
     border: 3px solid transparent;
