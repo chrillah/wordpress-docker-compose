@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Undersida2
+Template Name: Undersida3
 */
 
 get_header(); ?>
@@ -12,13 +12,6 @@ get_header(); ?>
         </h1>
     </section>
     <section class="blogg-container">
-        <aside id="secondary">
-            <?php
-            if (has_nav_menu('undersida_nav')) {
-                wp_nav_menu(array('theme_location' => 'undersida_nav', 'menu_class' => 'side-menu'));
-            }
-            ?>
-        </aside>
         <div id="primary">
             <?php the_content(); ?>
         </div>

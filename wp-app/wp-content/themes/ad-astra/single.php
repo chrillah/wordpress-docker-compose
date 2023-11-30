@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 <main class="a-page">
     <section>
-        <h1 h1 class="page-title">
+        <h1 class="page-title">
             <?php single_post_title(); ?>
 
         </h1>
@@ -44,4 +44,3 @@
     </section>
 </main>
 <?php get_footer(); ?>
-
