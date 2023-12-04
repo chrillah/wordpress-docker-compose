@@ -43,9 +43,8 @@
             <?php get_sidebar(); ?>
         </aside>
     </section>
-    <section>
+    <section class="pagination-section">
         <?php
-        // Add pagination links
         the_posts_pagination(
             array(
                 'prev_text' => __('Previous', 'textdomain'),
