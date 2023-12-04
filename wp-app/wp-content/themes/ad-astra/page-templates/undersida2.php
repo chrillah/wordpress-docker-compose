@@ -11,8 +11,8 @@ get_header(); ?>
             <?php the_title(); ?>
         </h1>
     </section>
-    <section class="blogg-container">
-        <aside id="secondary">
+    <section class="page-container">
+        <aside>
             <?php
             if (has_nav_menu('undersida_nav')) {
                 wp_nav_menu(array('theme_location' => 'undersida_nav', 'menu_class' => 'side-menu'));

@@ -254,8 +254,26 @@ form input::placeholder {
 .page-title {
     font-family: var(--display-font);
     text-transform: lowercase;
-    font-size: 4rem;
+    font-size: 2rem;
     padding-bottom: 3rem;
+}
+
+.page-container {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1rem;
+    padding-bottom: 3rem;
+}
+
+@media (min-width: 425px) {
+    .page-title {
+        word-break: break-all;
+        font-size: 4rem;
+    }
+
+    .page-container {
+        grid-template-columns: auto auto;
+    }
 }
 
 .blogg-container {
