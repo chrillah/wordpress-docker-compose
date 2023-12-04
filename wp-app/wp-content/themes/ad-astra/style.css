@@ -239,6 +239,9 @@ form input::placeholder {
     color: var(--secondary);
 }
 
+#wrap {
+}
+
 .hero {
     height: 100dvh;
 }
@@ -485,6 +488,10 @@ form textarea::placeholder {
 footer {
     padding: var(--side-pad);
     background-color: var(--primary);
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; */
 }
 
 .footer-container {
