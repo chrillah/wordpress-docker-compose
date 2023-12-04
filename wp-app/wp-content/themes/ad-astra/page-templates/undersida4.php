@@ -11,15 +11,14 @@ get_header(); ?>
             <?php the_title(); ?>
         </h1>
     </section>
-    <section class="blogg-container">
-        <div id="primary">
+    <section class="page-container-b">
+        <div id="primary" class="page-content-container">
             <?php the_content(); ?>
         </div>
-        <div>
+        <div class="page-img-container">
             <img src="<?= the_post_thumbnail_url("large") ?>" alt="">
         </div>
     </section>
 </main>
 
 <?php get_footer(); ?>
-
