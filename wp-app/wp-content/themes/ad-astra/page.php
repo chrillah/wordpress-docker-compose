@@ -1,22 +1,17 @@
-<?php get_header(); ?>
+<?php
+get_header(); ?>
 
 <main class="a-page">
-    <?php
-    while (have_posts()):
-        the_post();
-        ?>
-        <section>
-            <h1 class="page-title">
-                <?php the_title(); ?>
-            </h1>
-        </section>
-
-        <section>
+    <section>
+        <h1 class="page-title">
+            <?php the_title(); ?>
+        </h1>
+    </section>
+    <section class="blogg-container">
+        <div id="primary">
             <?php the_content(); ?>
-        </section>
-
-    <?php endwhile; ?>
-
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>
