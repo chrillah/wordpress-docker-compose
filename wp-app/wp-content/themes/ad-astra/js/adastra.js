@@ -49,14 +49,6 @@ function handleResize() {
     closeNavMenu()
 }
 
-// function handleOutsideClick(event) {
-//     if (!menuContainer.contains(event.target)) {
-//         closeNavMenu()
-//     }
-// }
-
-// document.addEventListener('click', handleOutsideClick)
-
 window.addEventListener('resize', handleResize)
 
 window.addEventListener('resize', screenResize)
