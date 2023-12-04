@@ -3,7 +3,6 @@
     <section>
         <h1 h1 class="page-title">
             <?php single_post_title(); ?>
-
         </h1>
     </section>
     <section class="blogg-container">
@@ -39,6 +38,8 @@
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
+        <button class="app-button" id="openAsideButton">Meny</button>
+        <button class="app-button" id="closeAsideButton">Stäng</button>
         <aside id="secondary" class="sidebar-container">
             <?php get_sidebar(); ?>
         </aside>

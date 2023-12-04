@@ -21,18 +21,18 @@
                 </div>
             </form>
         </div>
+
         <nav id="nav">
-            <div class="nav-container">
-                <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location' => 'ad-astra-header-meny',
-                        'menu_class' => 'nav-menu',
-                    )
-                );
-                ?>
-            </div>
+            <?php
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'ad-astra-header-meny',
+                    'menu_class' => 'nav-close',
+                )
+            );
+            ?>
         </nav>
-        <button id="myButton">KLICK</button>
+        <button class="app-button" id="openMenuButton">Meny</button>
+        <button class="app-button" id="closeMenuButton">Stäng</button>
     </header>
     <div id="wrap">
