@@ -4,3 +4,7 @@
     console.log('Hej');
   }
   myButton.addEventListener('click', handleClick);
+
+
+  const menuButton = document.getElementById('menu-button');
+  
