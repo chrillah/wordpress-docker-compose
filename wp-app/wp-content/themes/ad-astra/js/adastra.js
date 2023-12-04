@@ -7,8 +7,6 @@ const closeAsideButton = document.getElementById('closeAsideButton')
 const secondary = document.getElementById('secondary')
 
 closeMenuButton.style.display = 'none'
-secondary.style.display = 'none'
-closeAsideButton.style.display = 'none'
 
 function closeNavMenu() {
     var element = document.querySelector('.nav-open')

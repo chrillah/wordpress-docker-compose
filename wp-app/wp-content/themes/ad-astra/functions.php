@@ -86,19 +86,6 @@ function register_about_widget()
 }
 add_action('widgets_init', 'register_about_widget');
 
-
-// function adastra_menus()
-// {
-//     $locations = array(
-//         'sidemenu' => "Side menu"
-//     );
-//     register_nav_menus($locations);
-// }
-
-// add_action("init", "adastra_menus");
-
-
-
 function adastra_theme_support()
 {
     add_theme_support('post-thumbnails');
@@ -106,12 +93,10 @@ function adastra_theme_support()
 }
 add_action('after_setup_theme', 'adastra_theme_support');
 
-// pagenation
-// function items_per_page($query)
-// {
-//     $query->set('posts_per_page', 3);
-// }
-
-// add_action('pre_get_posts', 'items_per_page');
+function custom_excerpt_length($length)
+{
+    return 20;
+}
+add_filter('excerpt_length', 'custom_excerpt_length');
 
 ?>

@@ -10,31 +10,36 @@
             <?php if (have_posts()):
                 while (have_posts()):
                     the_post(); ?>
-                    <a href="<?= the_permalink(); ?>" class="blogg-post">
-                        <img src="<?= the_post_thumbnail_url("large") ?>" alt="">
+                    <div class="blogg-post">
+                        <a href="<?= the_permalink(); ?>">
+                            <div class="blogg-img-container">
+                                <img src="<?= the_post_thumbnail_url("large") ?>" alt="">
+                            </div>
 
-                        <div class="blogg-info">
 
-                            <h2 class="blogg-title">
-                                <?= the_title(); ?>
-                            </h2>
+                            <div class="blogg-info">
 
-                            <ul class="blogg-misc">
-                                <li>
-                                    <?= the_time("j F, Y"); ?>
-                                </li>
-                                <li>
-                                    <?= the_author_posts_link(); ?>
-                                </li>
-                                <li>
-                                    <?php the_category(", "); ?>
-                                </li>
-                            </ul>
-                        </div>
-                        <p>
-                            <?= the_excerpt(); ?>
-                        </p>
-                    </a>
+                                <p class="blogg-title">
+                                    <?= the_title(); ?>
+                                </p>
+
+                                <ul class="blogg-misc">
+                                    <li>
+                                        <?= the_time("j F, Y"); ?>
+                                    </li>
+                                    <li>
+                                        <?= the_author_posts_link(); ?>
+                                    </li>
+                                    <li>
+                                        <?php the_category(", "); ?>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p>
+                                <?= the_excerpt(); ?>
+                            </p>
+                        </a>
+                    </div>
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
