@@ -4,7 +4,7 @@ const closeMenuButton = document.getElementById('closeMenuButton')
 const openAsideButton = document.getElementById('openAsideButton')
 const closeAsideButton = document.getElementById('closeAsideButton')
 
-const secondary = document.getElementById('secondary')
+const secondaryNavMenu = document.getElementById('secondary')
 const menuContainer = document.getElementById('menu-container')
 
 closeMenuButton.style.display = 'none'
@@ -23,37 +23,42 @@ function openNavMenu() {
 
 function openAside() {
     openAsideButton.style.display = 'none'
-    secondary.style.display = 'block'
+    secondaryNavMenu.style.display = 'block'
     closeAsideButton.style.display = 'block'
 }
 
 function closeAside() {
     openAsideButton.style.display = 'block'
-    secondary.style.display = 'none'
+    secondaryNavMenu.style.display = 'none'
     closeAsideButton.style.display = 'none'
 }
 
-function screenResize() {
+function screenNavResize() {
     var windowWidth = window.innerWidth
 
     if (windowWidth >= 1024) {
+        secondaryNavMenu.style.display = 'block'
+        openAsideButton.style.display = 'none'
         menuContainer.style.display = 'flex'
         openMenuButton.style.display = 'none'
     } else {
+        openAsideButton.style.display = 'block'
+        secondaryNavMenu.style.display = 'none'
         menuContainer.style.display = 'none'
         openMenuButton.style.display = 'block'
     }
 }
 
 function handleResize() {
+    closeAside()
     closeNavMenu()
 }
 
 window.addEventListener('resize', handleResize)
 
-window.addEventListener('resize', screenResize)
+window.addEventListener('resize', screenNavResize)
 
-screenResize()
+screenNavResize()
 
 openMenuButton.addEventListener('click', openNavMenu)
 closeMenuButton.addEventListener('click', closeNavMenu)

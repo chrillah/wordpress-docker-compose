@@ -5,6 +5,10 @@
             <?php single_post_title(); ?>
         </h1>
     </section>
+    <div class="aside-button-container">
+        <button class="app-button" id="openAsideButton">Meny</button>
+        <button class="app-button" id="closeAsideButton">Stäng</button>
+    </div>
     <section class="blogg-container">
         <div class="list-of-bloggs">
             <?php if (have_posts()):
@@ -43,8 +47,6 @@
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
-        <button class="app-button" id="openAsideButton">Meny</button>
-        <button class="app-button" id="closeAsideButton">Stäng</button>
         <aside id="secondary" class="sidebar-container">
             <?php get_sidebar(); ?>
         </aside>
