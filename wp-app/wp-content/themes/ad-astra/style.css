@@ -310,6 +310,7 @@ form input::placeholder {
     gap: 1rem;
 }
 
+.single-blogg-info,
 .blogg-misc li {
     font-family: var(--app-font);
     color: var(--primary);
@@ -322,6 +323,20 @@ form input::placeholder {
 
 .blogg-text {
     padding-bottom: 3rem;
+}
+
+.single-post {
+    display: grid;
+    gap: 1rem;
+    padding-bottom: 5rem;
+}
+
+.single-blogg-info {
+}
+
+.widget {
+    gap: 0.5rem;
+    padding-bottom: 1rem;
 }
 
 .pagination-section {

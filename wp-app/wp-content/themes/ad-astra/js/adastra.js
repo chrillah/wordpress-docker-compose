@@ -43,5 +43,9 @@ function closeAside() {
 openMenuButton.addEventListener('click', openNavMenu)
 closeMenuButton.addEventListener('click', closeNavMenu)
 
-openAsideButton.addEventListener('click', openAside)
-closeAsideButton.addEventListener('click', closeAside)
+if (openAsideButton && closeAsideButton) {
+    openAsideButton.addEventListener('click', openAside)
+    closeAsideButton.addEventListener('click', closeAside)
+} else {
+    console.error()
+}
