@@ -5,27 +5,20 @@ const openAsideButton = document.getElementById('openAsideButton')
 const closeAsideButton = document.getElementById('closeAsideButton')
 
 const secondary = document.getElementById('secondary')
+const menuContainer = document.getElementById('menu-container')
 
 closeMenuButton.style.display = 'none'
 
 function closeNavMenu() {
-    var element = document.querySelector('.nav-open')
+    menuContainer.style.display = 'none'
     openMenuButton.style.display = 'block'
     closeMenuButton.style.display = 'none'
-    if (element.classList.contains('nav-open')) {
-        element.classList.remove('nav-open')
-        element.classList.add('nav-close')
-    }
 }
 
 function openNavMenu() {
-    var element = document.querySelector('.nav-close')
+    menuContainer.style.display = 'flex'
     closeMenuButton.style.display = 'block'
     openMenuButton.style.display = 'none'
-    if (element.classList.contains('nav-close')) {
-        element.classList.remove('nav-close')
-        element.classList.add('nav-open')
-    }
 }
 
 function openAside() {
@@ -39,6 +32,36 @@ function closeAside() {
     secondary.style.display = 'none'
     closeAsideButton.style.display = 'none'
 }
+
+function screenResize() {
+    var windowWidth = window.innerWidth
+
+    if (windowWidth >= 1024) {
+        menuContainer.style.display = 'flex'
+        openMenuButton.style.display = 'none'
+    } else {
+        menuContainer.style.display = 'none'
+        openMenuButton.style.display = 'block'
+    }
+}
+
+function handleResize() {
+    closeNavMenu()
+}
+
+// function handleOutsideClick(event) {
+//     if (!menuContainer.contains(event.target)) {
+//         closeNavMenu()
+//     }
+// }
+
+// document.addEventListener('click', handleOutsideClick)
+
+window.addEventListener('resize', handleResize)
+
+window.addEventListener('resize', screenResize)
+
+screenResize()
 
 openMenuButton.addEventListener('click', openNavMenu)
 closeMenuButton.addEventListener('click', closeNavMenu)
