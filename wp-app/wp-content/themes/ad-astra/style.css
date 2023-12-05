@@ -88,6 +88,11 @@ img {
     max-height: auto;
 }
 
+button {
+    background: none;
+    border: none;
+}
+
 form input {
     color: var(--primary);
     font-family: var(--app-font);
@@ -233,9 +238,17 @@ header {
     width: 10px;
 }
 
+.icon {
+    width: 35px;
+}
+
+.icon,
+.svg-icon {
+    fill: var(--primary);
+}
+
 .svg-icon {
     width: 15px;
-    fill: var(--primary);
 }
 
 .a-page {
@@ -398,7 +411,6 @@ header {
 }
 
 .blogg-misc {
-    max-width: 600px;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
