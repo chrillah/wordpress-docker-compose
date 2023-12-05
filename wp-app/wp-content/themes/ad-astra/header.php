@@ -14,26 +14,29 @@
             <div>
                 <a class="logo-type" href="index.html">Labb 1</a>
             </div>
-            <button class="app-button" id="openMenuButton">Meny</button>
-            <button class="app-button" id="closeMenuButton">Stäng menyn</button>
-        </div>
-        <div id="menu-container" class="menu">
-            <form id="searchform" class="searchform" action="/">
-                <div>
-                    <input placeholder="Sök efter..." type="text" value="<?php get_search_query(); ?>" name="s" />
-                    <input class="app-button" type="submit" value="Sök" />
+            <div>
+                <button class="app-button" id="openMenuButton">Meny</button>
+                <button class="app-button" id="closeMenuButton">Stäng menyn</button>
+                <div id="menu-container" class="menu">
+                    <form id="searchform" class="searchform" action="/">
+                        <div>
+                            <input placeholder="Sök efter..." type="text" value="<?php get_search_query(); ?>"
+                                name="s" />
+                            <input class="app-button" type="submit" value="Sök" />
+                        </div>
+                    </form>
+                    <nav id="nav">
+                        <?php
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'ad-astra-header-meny',
+                                'menu_class' => 'nav-menu',
+                            )
+                        );
+                        ?>
+                    </nav>
                 </div>
-            </form>
-            <nav id="nav">
-                <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location' => 'ad-astra-header-meny',
-                        'menu_class' => 'nav-menu',
-                    )
-                );
-                ?>
-            </nav>
+            </div>
         </div>
     </header>
     <div id="wrap">

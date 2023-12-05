@@ -35,7 +35,10 @@ function closeAside() {
     if (secondaryNavMenu) {
         secondaryNavMenu.style.display = 'none'
     }
-    closeAsideButton.style.display = 'none'
+
+    if (closeAsideButton) {
+        closeAsideButton.style.display = 'none'
+    }
 }
 
 function screenNavResize() {
