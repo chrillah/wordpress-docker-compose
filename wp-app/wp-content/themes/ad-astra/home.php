@@ -55,8 +55,8 @@
         <?php
         the_posts_pagination(
             array(
-                'prev_text' => __('Previous', 'textdomain'),
-                'next_text' => __('Next', 'textdomain'),
+                'prev_text' => __('Föregående', 'textdomain'),
+                'next_text' => __('Nästa', 'textdomain'),
             )
         );
         ?>

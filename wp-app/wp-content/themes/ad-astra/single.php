@@ -2,7 +2,12 @@
 <?php get_header(); ?>
 <main class="a-page">
     <section>
-        <a href="javascript:history.back()" class="app-button">Tillbaka</a>
+        <a href="javascript:history.back()" class="back-button">
+            <div class="caret-container">
+                <div class="caret"></div>
+            </div>
+            <p>Tillbaka</p>
+        </a>
         <h1 class="page-title">
             <?php single_post_title(); ?>
 

@@ -212,6 +212,25 @@ header {
     color: var(--secondary);
 }
 
+.back-button {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 10px auto;
+    gap: 0.2rem;
+}
+.caret-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caret {
+    rotate: 45deg;
+    border-left: var(--border-weight) solid var(--primary);
+    border-bottom: var(--border-weight) solid var(--primary);
+    height: 10px;
+    width: 10px;
+}
+
 .a-page {
     min-height: 100dvh;
     padding: var(--side-pad);
