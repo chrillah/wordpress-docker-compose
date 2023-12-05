@@ -231,6 +231,11 @@ header {
     width: 10px;
 }
 
+.svg-icon {
+    width: 15px;
+    fill: var(--primary);
+}
+
 .a-page {
     min-height: 100dvh;
     padding: var(--side-pad);
@@ -333,7 +338,7 @@ header {
         grid-template-columns: auto auto;
     }
 }
-
+.single-page-container,
 .blogg-container {
     display: grid;
     padding-bottom: 3rem;
@@ -357,6 +362,10 @@ header {
 }
 
 @media (min-width: 1024px) {
+    .single-page-container {
+        gap: 1rem;
+        grid-template-columns: auto auto;
+    }
     .blogg-container {
         gap: 1rem;
         grid-template-columns: auto auto;
@@ -398,6 +407,12 @@ header {
     gap: 1rem;
 }
 
+.blogg-misc li {
+    display: grid;
+    grid-template-columns: 15px auto;
+    gap: 5px;
+}
+
 .single-blogg-info,
 .blogg-misc li {
     font-family: var(--app-font);
@@ -407,7 +422,7 @@ header {
 .blogg-misc li p,
 .blogg-misc li a,
 .blogg-misc li {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 }
 
 .blogg-text {
@@ -415,12 +430,10 @@ header {
 }
 
 .single-post {
+    max-width: 600px;
     display: grid;
     gap: 1rem;
     padding-bottom: 5rem;
-}
-
-.single-blogg-info {
 }
 
 /* sidebar / side nav */
@@ -437,6 +450,9 @@ header {
     display: flex;
     justify-content: flex-end;
     padding: 1rem 0;
+}
+.sidebar-container {
+    margin-left: auto;
 }
 
 @media (max-width: 1023px) {
