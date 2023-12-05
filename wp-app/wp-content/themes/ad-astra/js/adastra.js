@@ -42,8 +42,12 @@ function screenNavResize() {
         menuContainer.style.display = 'flex'
         openMenuButton.style.display = 'none'
     } else {
-        openAsideButton.style.display = 'block'
-        secondaryNavMenu.style.display = 'none'
+        if (openAsideButton) {
+            openAsideButton.style.display = 'block'
+        }
+        if (secondaryNavMenu) {
+            secondaryNavMenu.style.display = 'none'
+        }
         menuContainer.style.display = 'none'
         openMenuButton.style.display = 'block'
     }
