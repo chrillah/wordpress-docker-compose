@@ -19,6 +19,8 @@ Version: 1.1
     --max-width: 1400px;
 
     --side-pad: 0 0.5rem;
+
+    --border-weight: 1px;
 }
 
 html,
@@ -56,23 +58,6 @@ body {
     }
 }
 
-.app-bg {
-}
-
-#wrap {
-}
-
-.a-page {
-    min-height: 100dvh;
-    padding: var(--side-pad);
-    padding-top: 8rem;
-    max-width: var(--max-width);
-    margin: 0 auto;
-}
-
-section {
-}
-
 h1 {
     color: var(--primary);
     font-family: var(--display-font);
@@ -101,6 +86,22 @@ img {
     max-height: auto;
 }
 
+form input {
+    color: var(--primary);
+    font-family: var(--app-font);
+    min-height: 25px;
+    border: transparent 1px solid;
+    outline: transparent 1px solid;
+    background-color: transparent;
+    border-bottom: var(--border-weight) solid var(--primary);
+}
+
+form input::placeholder {
+    color: var(--primary);
+    font-family: var(--app-font);
+}
+
+/* Header */
 header {
     background: rgb(0, 0, 0);
     background: linear-gradient(
@@ -134,14 +135,6 @@ header {
     display: none;
 }
 
-#openMenuButton {
-    display: block;
-}
-
-#closeMenuButton {
-    margin-left: auto;
-}
-
 @media (min-width: 1024px) {
     #menu-container {
         display: flex;
@@ -149,52 +142,13 @@ header {
     }
 
     .searchform {
+        padding-left: 1rem;
         order: 2;
     }
 
     #openMenuButton {
         display: none;
     }
-}
-
-.contact-form {
-    color: var(--primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-form input {
-    color: var(--primary);
-    font-family: var(--app-font);
-    min-height: 25px;
-    border: transparent 1px solid;
-    outline: transparent 1px solid;
-    background-color: transparent;
-    border-bottom: 3px solid var(--primary);
-}
-
-form input::placeholder {
-    color: var(--primary);
-    font-family: var(--app-font);
-}
-
-#nav {
-}
-
-.nav-menu {
-    max-width: 600px;
-    display: flex;
-}
-
-.nav-menu li a {
-    padding: var(--side-pad);
-}
-
-.nav-menu li:hover a {
-    background-color: var(--primary);
-    color: var(--secondary);
 }
 
 @media (max-width: 1023px) {
@@ -214,16 +168,40 @@ form input::placeholder {
     }
 }
 
+#nav {
+}
+
+.nav-menu {
+    max-width: 600px;
+    display: flex;
+}
+
+.nav-menu li a {
+    padding: var(--side-pad);
+}
+
+.nav-menu li:hover a {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+#openMenuButton {
+    display: block;
+}
+
+#closeMenuButton {
+    margin-left: auto;
+}
+
 .wpcf7-submit,
 .app-button {
-    /* max-width: 100px; */
     font-size: 0.7rem;
     padding: 0.3rem 0.5rem;
     border-radius: 100px;
     cursor: pointer;
     background-color: var(--secondary);
     color: var(--primary);
-    border: 3px solid var(--primary);
+    border: var(--border-weight) solid var(--primary);
     font-family: var(--display-font);
     transition: all ease-in-out 300ms;
 }
@@ -232,6 +210,14 @@ form input::placeholder {
 .app-button:hover {
     background-color: var(--primary);
     color: var(--secondary);
+}
+
+.a-page {
+    min-height: 100dvh;
+    padding: var(--side-pad);
+    padding-top: 8rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
 
 .hero {
@@ -334,19 +320,21 @@ form input::placeholder {
     padding-bottom: 3rem;
 }
 
-#secondary {
-    display: none;
-    padding-right: 2rem;
-}
-
-#closeAsideButton {
-    display: none;
-}
-
 .list-of-bloggs {
     display: grid;
-    gap: 1rem;
     grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+
+@media (min-width: 688px) {
+    .list-of-bloggs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .list-of-bloggs {
+    }
 }
 
 @media (min-width: 1024px) {
@@ -354,6 +342,9 @@ form input::placeholder {
         gap: 1rem;
         grid-template-columns: auto auto;
     }
+}
+
+@media (min-width: 1200px) {
     .list-of-bloggs {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -413,6 +404,16 @@ form input::placeholder {
 .single-blogg-info {
 }
 
+/* sidebar / side nav */
+#secondary {
+    display: none;
+    padding-right: 2rem;
+}
+
+#closeAsideButton {
+    display: none;
+}
+
 .aside-button-container {
     display: flex;
     justify-content: flex-end;
@@ -439,6 +440,7 @@ form input::placeholder {
     padding-bottom: 1rem;
 }
 
+/* pagination */
 .pagination-section {
     padding: 1rem 0;
 }
@@ -455,42 +457,25 @@ form input::placeholder {
     font-weight: 900;
 }
 
+/* contact page */
+
+.contact-form {
+    /* color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+}
+
 section form {
-    padding-top: 5rem;
-    max-width: 1000px;
+    max-width: 600px;
     display: grid;
     gap: 1rem;
     padding-bottom: 9rem;
 }
 
-section form div {
+section form input {
     width: 100%;
-    flex-direction: column;
-    display: flex;
-    gap: 1rem;
-}
-
-section form div {
-    padding-bottom: 2rem;
-}
-
-section form div:first-child {
-    gap: 3rem;
-}
-
-form input {
-    color: var(--primary);
-    font-family: var(--app-font);
-    min-height: 25px;
-    border: transparent 1px solid;
-    outline: transparent 1px solid;
-    background-color: transparent;
-    border-bottom: 3px solid var(--primary);
-}
-
-form input::placeholder {
-    color: var(--primary);
-    font-family: var(--app-font);
 }
 
 form textarea {
@@ -506,6 +491,12 @@ form textarea::placeholder {
     color: var(--secondary);
     font-family: var(--app-font);
 }
+
+.wpcf7-submit {
+    max-width: 100px;
+}
+
+/* footer */
 
 footer {
     padding: var(--side-pad);
