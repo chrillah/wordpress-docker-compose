@@ -18,6 +18,8 @@ Version: 1.1
 
     --max-width: 1400px;
 
+    --max-width-b: 750px;
+
     --side-pad: 0 0.5rem;
 
     --border-weight: 1px;
@@ -425,7 +427,7 @@ header {
 }
 
 .single-post {
-    max-width: 600px;
+    max-width: var(--max-width-b);
     display: grid;
     gap: 1rem;
     padding-bottom: 5rem;
@@ -498,7 +500,7 @@ header {
 }
 
 section form {
-    max-width: 600px;
+    max-width: var(--max-width-b);
     display: grid;
     gap: 1rem;
     padding-bottom: 9rem;
