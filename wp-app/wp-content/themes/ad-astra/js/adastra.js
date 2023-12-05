@@ -28,8 +28,13 @@ function openAside() {
 }
 
 function closeAside() {
-    openAsideButton.style.display = 'block'
-    secondaryNavMenu.style.display = 'none'
+    if (openAsideButton) {
+        openAsideButton.style.display = 'block'
+    }
+
+    if (secondaryNavMenu) {
+        secondaryNavMenu.style.display = 'none'
+    }
     closeAsideButton.style.display = 'none'
 }
 
@@ -37,8 +42,13 @@ function screenNavResize() {
     var windowWidth = window.innerWidth
 
     if (windowWidth >= 1024) {
-        secondaryNavMenu.style.display = 'block'
-        openAsideButton.style.display = 'none'
+        if (secondaryNavMenu) {
+            secondaryNavMenu.style.display = 'block'
+        }
+
+        if (openAsideButton) {
+            openAsideButton.style.display = 'none'
+        }
         menuContainer.style.display = 'flex'
         openMenuButton.style.display = 'none'
     } else {
