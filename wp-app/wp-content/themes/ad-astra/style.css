@@ -18,7 +18,7 @@ Version: 1.1
 
     --max-width: 1400px;
 
-    --side-pad: 0 1rem;
+    --side-pad: 0 0.5rem;
 }
 
 html {
@@ -27,6 +27,12 @@ html {
 
 body {
     background-color: var(--secondary);
+}
+
+@media (min-width: 425px) {
+    body {
+        --side-pad: 0 1rem;
+    }
 }
 
 .app-bg {
@@ -314,8 +320,6 @@ form input::placeholder {
 
 .blogg-container {
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 1rem;
     padding-bottom: 3rem;
 }
 
@@ -335,6 +339,10 @@ form input::placeholder {
 }
 
 @media (min-width: 1024px) {
+    .blogg-container {
+        gap: 1rem;
+        grid-template-columns: auto auto;
+    }
     .list-of-bloggs {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -398,6 +406,21 @@ form input::placeholder {
     display: flex;
     justify-content: flex-end;
     padding: 1rem 0;
+}
+
+@media (max-width: 1023px) {
+    .sidebar-container {
+        padding-left: 2rem;
+        position: absolute;
+        right: 0;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0.47942927170868344) 67%,
+            rgba(0, 0, 0, 0.2805497198879552) 100%
+        );
+    }
 }
 
 .widget {
