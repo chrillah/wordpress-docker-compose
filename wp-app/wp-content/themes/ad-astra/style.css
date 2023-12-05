@@ -356,11 +356,6 @@ header {
     }
 }
 
-@media (min-width: 768px) {
-    .list-of-bloggs {
-    }
-}
-
 @media (min-width: 1024px) {
     .single-page-container {
         gap: 1rem;
@@ -407,21 +402,21 @@ header {
     gap: 1rem;
 }
 
-.blogg-misc li {
+.blogg-misc-item {
     display: grid;
     grid-template-columns: 15px auto;
     gap: 5px;
 }
 
 .single-blogg-info,
-.blogg-misc li {
+.blogg-misc-item {
     font-family: var(--app-font);
     color: var(--primary);
 }
 
-.blogg-misc li p,
-.blogg-misc li a,
-.blogg-misc li {
+.blogg-misc-item p,
+.blogg-misc-item a,
+.blogg-misc-item {
     font-size: 0.6rem;
 }
 
