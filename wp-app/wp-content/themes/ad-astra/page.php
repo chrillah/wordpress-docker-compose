@@ -8,7 +8,7 @@ get_header(); ?>
         </h1>
     </section>
     <section class="blogg-container">
-        <div id="primary">
+        <div class="single-post">
             <?php the_content(); ?>
         </div>
     </section>

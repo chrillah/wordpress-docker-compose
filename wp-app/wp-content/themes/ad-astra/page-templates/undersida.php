@@ -12,7 +12,7 @@ get_header(); ?>
         </h1>
     </section>
     <section class="page-container">
-        <div id="primary">
+        <div class="single-post">
             <?php the_content(); ?>
         </div>
         <aside>

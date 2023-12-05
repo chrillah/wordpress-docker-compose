@@ -18,7 +18,7 @@ Version: 1.1
 
     --max-width: 1400px;
 
-    --max-width-b: 750px;
+    --max-width-b: 800px;
 
     --side-pad: 0 0.5rem;
 
@@ -335,6 +335,10 @@ header {
 
     .page-container {
         grid-template-columns: auto auto;
+    }
+
+    .page-container aside {
+        margin-left: auto;
     }
 }
 
