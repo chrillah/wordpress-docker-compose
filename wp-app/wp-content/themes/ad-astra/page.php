@@ -5,6 +5,7 @@ get_header(); ?>
     <section>
         <h1 class="page-title">
             <?php the_title(); ?>
+            
         </h1>
     </section>
     <section class="blogg-container">

@@ -4,13 +4,10 @@
     <section class="hero">
         <div class="hero-image">
             <div class="hero-text-container">
-                <h1 class="hero-title">Hej och välkommen!</h1>
-                <p class="hero-text">
-                    Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Sed sed sodales mauris. Aliquam
-                    felis est, efficitur vel fringilla quis,
-                    vehicula quis ex.
-                </p>
+                <h1 class="hero-title">
+                    <?php the_title(); ?>
+                </h1>
+                <?php the_content(); ?>
             </div>
         </div>
     </section>
