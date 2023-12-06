@@ -127,7 +127,6 @@ header {
 }
 
 .header-container {
-    height: 35px;
     max-width: var(--max-width);
     margin: 0 auto;
     display: flex;
@@ -148,6 +147,10 @@ header {
     #menu-container {
         display: flex;
         justify-content: space-between;
+    }
+
+    .header-container {
+        height: 35px;
     }
 
     .searchform {
@@ -227,6 +230,7 @@ header {
     display: grid;
     grid-template-columns: 10px auto;
     gap: 0.2rem;
+    padding-bottom: 3rem;
 }
 .caret-container {
     display: flex;
@@ -247,10 +251,14 @@ header {
 }
 
 .icon,
+.single-icon,
 .svg-icon {
     fill: var(--primary);
 }
 
+.single-icon {
+    width: 20px;
+}
 .svg-icon {
     width: 15px;
 }
@@ -327,12 +335,10 @@ header {
 
 /* Main */
 
+.single-page-title,
 .page-title {
-    /* text-transform: lowercase; */
-    padding-right: auto;
-    font-family: var(--display-font);
     font-size: 2rem;
-    padding-bottom: 3rem;
+    font-family: var(--display-font);
 }
 
 .page-container-b,
@@ -379,14 +385,19 @@ header {
 }
 
 @media (min-width: 768px) {
+    .single-page-title {
+        font-size: 3rem;
+    }
     .page-container-b {
         grid-template-columns: auto auto;
     }
 }
+
+.single-page,
 .single-page-container,
 .blogg-container {
     display: grid;
-    padding-bottom: 3rem;
+    padding-bottom: 8rem;
 }
 
 .list-of-bloggs {
@@ -457,6 +468,16 @@ header {
     gap: 5px;
 }
 
+.single-blogg-misc-item {
+    gap: 3px;
+    display: flex;
+    align-items: center;
+    /* display: grid;
+    grid-template-columns: 30px auto;
+    gap: 5px; */
+}
+
+.single-blogg-misc-item,
 .single-blogg-info,
 .blogg-misc-item {
     font-family: var(--app-font);
@@ -477,6 +498,9 @@ header {
     max-width: var(--max-width-b);
     display: grid;
     gap: 1rem;
+}
+
+.extra-pad {
     padding-bottom: 5rem;
 }
 
