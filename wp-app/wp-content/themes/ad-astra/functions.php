@@ -13,31 +13,15 @@ function add_custom_script()
 }
 add_action('wp_enqueue_scripts', 'add_custom_script');
 
-function register_my_menus()
-{
-    register_nav_menus(
-        array(
-            'header-menu' => __('Header Menu'),
-        )
-    );
-}
-add_action('after_setup_theme', 'register_my_menus');
-
 function ad_astra_register_menus()
 {
-    register_nav_menus(
-        array(
-            'ad-astra-header-meny' => __('Ad Astra Header Meny', 'ad-astra'),
-        )
+    $locations = array(
+        'ad-astra-header-meny' => 'ad-astra-header-meny',
+        'ad-astra-secondary-meny' => 'ad-astra-secondary-meny'
     );
+    register_nav_menus($locations);
 }
-add_action('after_setup_theme', 'ad_astra_register_menus');
-
-function custom_side_menu()
-{
-    register_nav_menu('undersida_nav', __('Undersida Nav'));
-}
-add_action('after_setup_theme', 'custom_side_menu');
+add_action('init', 'ad_astra_register_menus');
 
 function demotema_register_sidebars()
 {

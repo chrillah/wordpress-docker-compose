@@ -14,9 +14,7 @@ get_header(); ?>
     <section class="page-container">
         <aside>
             <?php
-            if (has_nav_menu('undersida_nav')) {
-                wp_nav_menu(array('theme_location' => 'undersida_nav', 'menu_class' => 'side-menu'));
-            }
+            wp_nav_menu(array('theme_location' => 'ad-astra-secondary-meny'));
             ?>
         </aside>
         <div id="primary">

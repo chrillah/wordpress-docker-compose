@@ -11,7 +11,7 @@
     </ul>
 </div>
 <div class="widget">
-    <h2>categories</h2>
+    <h2>Kategorier</h2>
     <ul>
         <?php wp_list_categories('title_li='); ?>
     </ul>

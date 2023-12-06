@@ -16,10 +16,9 @@ get_header(); ?>
             <?php the_content(); ?>
         </div>
         <aside>
+            <h2>Länkar</h2>
             <?php
-            if (has_nav_menu('undersida_nav')) {
-                wp_nav_menu(array('theme_location' => 'undersida_nav', 'menu_class' => 'side-menu'));
-            }
+            wp_nav_menu(array('theme_location' => 'ad-astra-secondary-meny'));
             ?>
         </aside>
     </section>
