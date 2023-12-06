@@ -8,6 +8,8 @@
                     <?php the_title(); ?>
                 </h1>
                 <?php the_content(); ?>
+                <!-- <a class="app-button"
+                    href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>">Nyheter</a> -->
             </div>
         </div>
     </section>
