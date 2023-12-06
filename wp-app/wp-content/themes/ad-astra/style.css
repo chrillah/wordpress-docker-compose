@@ -187,6 +187,7 @@ header {
     padding: var(--side-pad);
 }
 
+.nav-menu .current-menu-item a,
 .nav-menu li:hover a {
     background-color: var(--primary);
     color: var(--secondary);
