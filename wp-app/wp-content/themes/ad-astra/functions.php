@@ -70,6 +70,22 @@ function register_about_widget()
 }
 add_action('widgets_init', 'register_about_widget');
 
+function register_site_name_widget()
+{
+    register_sidebar(
+        array(
+            'name' => 'Text Widget',
+            'id' => 'text-widget',
+            'description' => 'En widget som visar en site name',
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
+        )
+    );
+}
+add_action('widgets_init', 'register_site_name_widget');
+
 function adastra_theme_support()
 {
     add_theme_support('post-thumbnails');

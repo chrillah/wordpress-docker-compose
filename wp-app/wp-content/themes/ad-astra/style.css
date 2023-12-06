@@ -133,7 +133,8 @@ header {
     justify-content: space-between;
 }
 
-.logo-type {
+.logo-type,
+.logo-type .widget_text p {
     font-family: var(--display-font);
     text-transform: lowercase;
 }
@@ -510,7 +511,7 @@ header {
     }
 }
 
-.widget {
+.sidebar-widget {
     gap: 0.5rem;
     padding-bottom: 1rem;
 }
@@ -618,6 +619,7 @@ footer {
 }
 
 .footer-bottom p {
+    font-family: var(--app-font);
     color: var(--secondary);
 }
 

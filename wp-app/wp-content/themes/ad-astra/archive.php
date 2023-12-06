@@ -13,6 +13,9 @@
 
         <section>
             <div class="single-post">
+                <?php if (has_post_thumbnail()): ?>
+                    <img src="<?= esc_url(the_post_thumbnail_url('large')); ?>" alt="">
+                <?php endif; ?>
                 <?php the_content(); ?>
             </div>
         </section>

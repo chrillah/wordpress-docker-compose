@@ -14,7 +14,13 @@
     <header id="header">
         <div class="header-container">
             <div>
-                <a class="logo-type" href="<?php echo esc_url(get_home_url()); ?>">rfn</a>
+                <a class="logo-type" href="<?php echo esc_url(get_home_url()); ?>">
+                    <?php
+                    if (is_active_sidebar('text-widget')) {
+                        dynamic_sidebar('text-widget');
+                    }
+                    ?>
+                </a>
             </div>
             <div>
                 <button id="openMenuButton">
