@@ -127,6 +127,7 @@ header {
 }
 
 .header-container {
+    height: 35px;
     max-width: var(--max-width);
     margin: 0 auto;
     display: flex;
