@@ -12,7 +12,9 @@
         </section>
 
         <section>
-            <?php the_content(); ?>
+            <div class="single-post">
+                <?php the_content(); ?>
+            </div>
         </section>
 
     <?php endwhile; ?>
