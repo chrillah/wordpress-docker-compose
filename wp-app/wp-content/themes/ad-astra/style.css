@@ -335,6 +335,10 @@ header {
 
 /* Main */
 
+.page-title {
+    padding-bottom: 3rem;
+}
+
 .single-page-title,
 .page-title {
     font-size: 2rem;
