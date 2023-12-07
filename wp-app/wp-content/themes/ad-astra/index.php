@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Labb 1</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="js/jquery.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -160,7 +159,7 @@
         </footer>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/adastra.js"></script>
 </body>
 
 </html>

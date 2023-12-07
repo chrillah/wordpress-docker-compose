@@ -1,20 +1,17 @@
 <?php
-function load_style_script()
-{
+function load_style_script() {
     $version = wp_get_theme()->get('Version');
-    wp_enqueue_style('adastra-style', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('adastra-style', get_template_directory_uri().'/css/style.css');
 }
 
 add_action('wp_enqueue_scripts', 'load_style_script');
 
-function add_custom_script()
-{
-    wp_enqueue_script('my-custom-script', get_template_directory_uri() . '/js/adastra.js', array(), '1.0', true);
+function add_custom_script() {
+    wp_enqueue_script('my-custom-script', get_template_directory_uri().'/js/adastra.js', array(), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'add_custom_script');
 
-function ad_astra_register_menus()
-{
+function ad_astra_register_menus() {
     $locations = array(
         'ad-astra-header-meny' => 'ad-astra-header-meny',
         'ad-astra-secondary-meny' => 'ad-astra-secondary-meny'
@@ -23,8 +20,7 @@ function ad_astra_register_menus()
 }
 add_action('init', 'ad_astra_register_menus');
 
-function demotema_register_sidebars()
-{
+function demotema_register_sidebars() {
     register_sidebar(
         array(
             'name' => 'adress widget',
@@ -38,8 +34,7 @@ function demotema_register_sidebars()
 
 add_action('widgets_init', 'demotema_register_sidebars');
 
-function register_link_widget()
-{
+function register_link_widget() {
     register_sidebar(
         array(
             'name' => 'Link Widget',
@@ -54,8 +49,7 @@ function register_link_widget()
 }
 add_action('widgets_init', 'register_link_widget');
 
-function register_about_widget()
-{
+function register_about_widget() {
     register_sidebar(
         array(
             'name' => 'About Widget',
@@ -70,8 +64,7 @@ function register_about_widget()
 }
 add_action('widgets_init', 'register_about_widget');
 
-function register_site_name_widget()
-{
+function register_site_name_widget() {
     register_sidebar(
         array(
             'name' => 'Text Widget',
@@ -86,15 +79,13 @@ function register_site_name_widget()
 }
 add_action('widgets_init', 'register_site_name_widget');
 
-function adastra_theme_support()
-{
+function adastra_theme_support() {
     add_theme_support('post-thumbnails');
     add_image_size('adastra-img', 1200, 800, true);
 }
 add_action('after_setup_theme', 'adastra_theme_support');
 
-function custom_excerpt_length($length)
-{
+function custom_excerpt_length($length) {
     return 20;
 }
 add_filter('excerpt_length', 'custom_excerpt_length');
